@@ -1,41 +1,62 @@
-const score = 0;
-let output = ''
-switch (score) {
-    case 0:
-        output += 'So '
-    case 1:
-        output += 'How ';
-        output += 'Old ';
-    case 2:
-        output += 'are ';
-    case 3:
-        output += 'you ?'
-        console.log(output)
-        break;
-    case 4:
-        output += '!!';
-        console.log(output);
-        break;
-    default:
-        console.log('Please pick a number from 0 to 4')
-}
+// let twoArugs = (a, b) => [a, b]
+// console.log(twoArugs(1, 5))
+// twoArugs = (a, b, d) => a + b + d
+// console.log(typeof twoArugs(1, 2, 3))
 
-let gradStudent = 67
-    // instead of taking para of gradStudent by using true
-    //this comparing the true boolean to the result of each case like gradStudent >= 90 is true or false
-switch (true) {
-    case (gradStudent >= 90):
-        console.log('My grade is A+')
-        break;
-    case (gradStudent >= 80):
-        console.log('My grade is B+')
-        break;
-    case (gradStudent >= 70):
-        console.log('My grade is C+')
-        break;
-    case (gradStudent >= 60):
-        console.log('My grade is D+')
-        break;
-    default:
-        console.log('Fail')
-}
+// function countOddEven(a) {
+//     let even = 0;
+//     let odd = 0
+//     a.forEach(i => i % 2 === 0 ? even++ : typeof i === "number" ? odd++ : 'not a number')
+//     return [even, odd]
+// }
+
+
+// console.log(countOddEven([1, 2, 3, 11, 1, 2, 2, 11, 1, 1, 1, 2, 2, 2, ]))
+
+// // one line function
+// const oddOrEven = (a) => a.reduce((a, b) => a + b) 
+
+// console.log(oddOrEven([1,2,3,1]))
+// let arr =['Hi','My','name','is','John']
+// let string ='hahahahhaha'
+// console.log(string.split(''))
+// console.log(arr.join(' '))
+
+// function convert(a){
+//     let arr=[]
+//     for(let i =0; i<a.length;i++){
+//         arr.push(Number(a[i]))
+//     }
+//     return arr
+// // }
+// const convert = (a) => a.map(x => Number(x))
+
+// console.log(convert(['1', '2', '5']))
+
+const work = (arr) => arr.reduce((a, b) => a + b)
+
+console.log(work(['a', 'b', 1, 2, 4, 1, 2]))
+
+// convert object to array
+// function objToArray(obj) {
+//     let arr = [];
+//     for (let i in obj) { arr.push(i, obj[i]) }
+//     return arr
+// }
+const objToArray = (obj) => Object.entries(obj)
+
+console.log(objToArray({ oj: 'a', banana: 'yellow' }))
+
+// function reverse(str) {
+//     let arr = str.split('')
+//     let reverseArr = arr.reverse()
+//     return reverseArr.join('')
+// }
+// function reversed(str) {
+//     if (str === '') { return "" } else {
+//         return reversed(str.substr(1)) + str.charAt(0)
+//     }
+// }
+const revStr = (str) => str.length < 2 ? str : revStr(str.slice(1, str.length)) + str[0]
+console.log(revStr('hahahha yahoo'))
+    //homework object.entries and keys
