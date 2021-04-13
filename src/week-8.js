@@ -40,5 +40,6 @@ const NestedArray = (arr) => arr.reduce((a, b) => (a[b % 2].push(+b), a), [
 ])
 console.log(NestedArray(arr))
 
+
 const space = (string) => string.split('').join(' ')
 console.log(space('hahahah'))
